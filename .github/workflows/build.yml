@@ -54,6 +54,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            target/*.jar
+            target/CommandBlockerPro-*.jar
             LICENSE.txt
           generate_release_notes: true
