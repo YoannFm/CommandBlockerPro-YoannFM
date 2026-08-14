@@ -56,8 +56,8 @@ public class DummyCommand extends BukkitCommand {
      */
     @Override
     public boolean execute(@NotNull CommandSender commandSender, @NotNull String s, @NotNull String[] strings) {
-        // Replaces the {command} placeholder with the command that was run.
-        final String message = blockMessage.replace("{command}", "/" + s);
+        // Replaces the {command} placeholder with the command that was run (without the leading '/').
+        final String message = blockMessage.replace("{command}", s);
         ChatUtils.chat(commandSender, message);
         return true;
     }
